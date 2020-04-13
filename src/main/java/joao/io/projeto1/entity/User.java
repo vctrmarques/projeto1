@@ -1,11 +1,13 @@
 package joao.io.projeto1.entity;
 import java.util.Date;
 
-import javax.persistence.*;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Document
 @Table(name="\"User\"")
@@ -18,7 +20,8 @@ public class User {
 	private String sexo;
 	private String email;
 	
-	@JsonFormat(pattern="yyyy-MM-dd")
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dataNascimento;
 	
 	private String naturalidade;

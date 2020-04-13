@@ -28,8 +28,8 @@ public class DataInicializr implements ApplicationListener<ContextRefreshedEvent
 		try {
 			if(users.isEmpty()) {
 				creatUsers("André Marques","masculino","andmarques@gmailcom",formato.parse("05/05/2015"),"Recife","Brasileiro","424.471.110-45");
-				creatUsers("André Victor","masculino","testando@gmailcom",formato.parse("05/05/2018"),"Olinda","Brasileiro","644.992.980-40");
-				creatUsers("João Marques","masculino","teste@gmailcom",formato.parse("07/09/1983"),"Paulista","Brasileiro","921.321.100-77");
+				creatUsers("masculino","masculino", "testando@gmailcom",formato.parse("05/05/2018"),"Olinda","Brasileiro","644.992.980-40");
+				creatUsers("masculino","masculino", "teste@gmailcom",formato.parse("07/09/1983"),"Paulista","Brasileiro","921.321.100-77");
 			}
 			
 		} catch (ParseException e) {
@@ -44,8 +44,4 @@ public class DataInicializr implements ApplicationListener<ContextRefreshedEvent
 		userRepository.save(user);
 	}
 	
-	private void deletarUsers(User user) {
-		userRepository.delete(user);
-	}
-
 }
