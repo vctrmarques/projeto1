@@ -1,12 +1,12 @@
-package joao.io.projeto1;
+package joao.io.projetoFoco;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Projeto1Application {
+public class ProjetoFocoApplication {
    
 	public static void main(String[] args) {
-		SpringApplication.run(Projeto1Application.class, args);      
+		SpringApplication.run(ProjetoFocoApplication.class, args);      
 	}
 }
